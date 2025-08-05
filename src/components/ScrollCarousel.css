@@ -1,0 +1,40 @@
+.scroll-container {
+  overflow: hidden;
+  width: 100%;
+  background: none;
+  padding: 20px 0;
+}
+
+.scroll-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 60s linear infinite;
+}
+
+.scroll-item {
+  flex: 0 0 auto;
+  margin: 0 10px;
+}
+
+.scroll-categorie {
+  font-size: 30px;
+  padding: 20px;
+  flex: 0 0 auto;
+  margin: 0 10px;
+}
+
+.scroll-item img {
+  height: 400px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Animation fluide */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
