@@ -82,8 +82,8 @@ const Recherche: React.FC = () => {
 
   return (
     <Container fluid className='background'>
-      <h2>Recherche de films</h2>
-      <Form onSubmit={handleSubmit} className="mb-4">
+      <h2>Vous ne trouver pas ce que vous chercher ?</h2>
+      <Form onSubmit={handleSubmit} className="recherche">
         <Form.Group controlId="search">
           <Form.Control
             type="text"

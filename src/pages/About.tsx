@@ -8,9 +8,9 @@ const About: React.FC = () => {
   return (
     <Container fluid className='background'>
       <div className='header'>
-        <h1>Notre projet</h1>
+        <h2>Notre projet</h2>
       </div>
-      <div>
+      <div className='pb-5'>
         <p>
           Dans le cadre de notre cours de projet d'intégration, nous avons été appelés à
           créer un site web présentant des films à voir. Dès nos premières séances, nous
@@ -25,7 +25,7 @@ const About: React.FC = () => {
         </p>
       </div>
       <Row className='align-items-center'>
-        <h3>Étienne</h3>
+        <h2>Étienne</h2>
         <Col md={4} className='image'>
         <img src={etienne} alt='image'></img>
       </Col>

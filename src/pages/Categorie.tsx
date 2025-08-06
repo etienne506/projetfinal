@@ -152,7 +152,7 @@ const Categorie: React.FC = () => {
         </div>
 
         <div>
-          <h2 className="demo-title" style={{ marginTop: 30 }}>Catégorie : {genreName ?? genreId}</h2>
+          <h2 className="demo-title" style={{ marginTop: 30 }}>{genreName ?? genreId}</h2>
           <p className="mb-3 text-end" style={{ marginRight: 20 }}>
             {totalResults} films trouvés — page {pageFromUrl} sur {totalPages}
           </p>

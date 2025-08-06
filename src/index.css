@@ -91,16 +91,47 @@ button:focus-visible {
   height: 500px;
   margin-left: 40px;
   margin-top: 50px;
+  padding-bottom: 50px;
 }
 
 .background {
   background: linear-gradient(to right, #480082, rgba(0, 0, 0, 0.2));
 }
 
+.background h2 {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 .film-card:hover {
       background-color: none;
       transform: translateY(-6px) scale(1.03);
     }
+
+.recherche {
+  margin-left: 50vh;
+  margin-right: 50vh;
+  margin-bottom: 50px;
+}
+
+.costum-button {
+  display: block;
+  height: 60px;
+  width: 20vh;
+  margin: 0 auto;
+  background-color: white;
+  color: #480082;
+  font-size: 20px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.costum-button:hover {
+  background-color: #480082;
+  color: white;
+  border-color: white;
+}
 
 
 @media (prefers-color-scheme: light) {

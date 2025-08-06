@@ -3,6 +3,14 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  font-family: 'Golos Text', sans-serif;
+}
+
+@font-face {
+  font-family: 'Golos Text', sans-serif;
+  src: url('./assets/fonts/GolosText-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 .logo {

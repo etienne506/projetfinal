@@ -41,7 +41,6 @@ const Home: React.FC = () => {
   return (
     <Container fluid className='background'>
       <Row>
-        {/* SECTION AVEC L'IMAGE EN GRAND PLAN */}
         <div
           style={{
             backgroundImage: `linear-gradient(to right, #480082, rgba(0, 0, 0, 0.2)), url(https://image.tmdb.org/t/p/original${mainPopular.backdrop_path})`,
@@ -68,13 +67,11 @@ const Home: React.FC = () => {
             ))}
           </div>
         </div>
-
         <Link to={`/films`}>
-          <button>Voir plus</button>
+          <button className='costum-button'>Voir plus</button>
         </Link>
       </Row>
       <Row>
-        {/* SECTION AVEC L'IMAGE EN GRAND PLAN */}
         <div
           style={{
             backgroundImage: `linear-gradient(to left, #480082, rgba(0, 0, 0, 0.2)), url(https://image.tmdb.org/t/p/original${mainUpcoming.backdrop_path})`,
@@ -103,7 +100,7 @@ const Home: React.FC = () => {
           </div>
         </div>
         <Link to={`/films`}>
-          <button>Voir plus</button>
+          <button className='costum-button'>Voir plus</button>
         </Link>
       </Row>
       <Row>
@@ -118,7 +115,7 @@ const Home: React.FC = () => {
           </div>
         </div>
         <Link to={`/categorie/:genreId`}>
-          <button>Voir plus</button>
+          <button className='costum-button'>Voir plus</button>
         </Link>
       </Row>
       <Row className='footer'>
