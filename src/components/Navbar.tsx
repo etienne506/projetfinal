@@ -6,7 +6,7 @@ const AppNavbar: React.FC = () => {
   return (
     <Navbar bg="dark" variant="dark" expand="md" className='sticky-top'>
       <Container>
-        <Navbar.Brand as={Link} to="/">NOXA</Navbar.Brand>
+        <Navbar.Brand as={Link} to="/"><img src='/logo-noxa.png' className='logo-menu'></img></Navbar.Brand>
         <Navbar.Toggle aria-controls="main-navbar-nav" />
         <Navbar.Collapse id="main-navbar-nav">
           <Nav className="me-auto">

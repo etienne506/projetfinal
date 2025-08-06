@@ -58,7 +58,7 @@ const Films: React.FC = () => {
                   src={
                     movie.poster_path
                       ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
-                      : '/placeholder.jpg'
+                      : '/noxa.png'
                   }
                   alt={movie.title}
                 />
@@ -77,7 +77,7 @@ const Films: React.FC = () => {
           <i className="fa-brands fa-youtube"></i>
         </Col>
         <Col>
-          <h3>NOXA</h3>
+          <img src='/logo-noxa.png' className='logo'></img>
         </Col>
         <Col>
           <h3>Besoin d'aide ?</h3>

@@ -56,13 +56,30 @@ button:focus-visible {
 
 .footer {
   width: 100%;
-  min-height: 50px;
+  min-height: 50vh;
+  padding-top: 20vh;
   background: black;
   text-align: center;
 }
 
+.footer i {
+  height: 30px;
+  width: 50px;
+}
+
+.logo {
+  width: 25vh;
+  height: 75px;
+}
+
+.logo-menu {
+  width: 10vh;
+  height: 35px;
+}
+
 .popular {
   min-height: 60vh;
+  text-align: left;
 }
 
 .upcoming {
@@ -82,7 +99,7 @@ button:focus-visible {
 }
 
 .header h1{
-  text-align: center;
+
   margin-bottom: 80px;
   margin-top: 0;
 }
@@ -102,6 +119,7 @@ button:focus-visible {
   text-align: center;
   padding-top: 30px;
   padding-bottom: 30px;
+  font-size: 40px;
 }
 
 .film-card:hover {

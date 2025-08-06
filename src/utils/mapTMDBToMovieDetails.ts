@@ -10,7 +10,7 @@ export function mapTMDBToMovieDetails(
   videos: TMDBVideos,
   providers: TMDBWatchProviders
 ): MovieDetails {
-  // Trouver le réalisateur principal
+
   const directorObj = credits.crew.find(
     member => member.job === 'Director'
   );
@@ -18,17 +18,17 @@ export function mapTMDBToMovieDetails(
     ? { id: directorObj.id, name: directorObj.name }
     : null;
 
-  // Prendre les 10 premiers acteurs principaux
+
   const cast = credits.cast.slice(0, 10).map(actor => ({
     id: actor.id,
     name: actor.name,
     character: actor.character,
     photoUrl: actor.profile_path
       ? `https://image.tmdb.org/t/p/w185${actor.profile_path}`
-      : null,
+      : '/noxa.png',
   }));
 
-  // Bande-annonce principale en français, sinon la première "Trailer" dispo
+
   let trailer: string | null = null;
   const trailerFR = videos.results.find(
     vid =>
@@ -41,12 +41,12 @@ export function mapTMDBToMovieDetails(
   );
   trailer = (trailerFR ?? trailerAny)?.key ?? null;
 
-  // Lien IMDb
+
   const imdbUrl = movie.imdb_id
     ? `https://www.imdb.com/title/${movie.imdb_id}`
-    : null;
+    : '/noxa.png';
 
-  // Plateformes de streaming FR
+
   const streaming = providers.results?.FR?.flatrate ?? [];
   const streamingProviders = streaming.map(p => ({
     name: p.provider_name,
@@ -62,10 +62,10 @@ export function mapTMDBToMovieDetails(
     releaseDate: movie.release_date,
     posterUrl: movie.poster_path
       ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
-      : null,
+      : '/noxa.png',
     backdropUrl: movie.backdrop_path
       ? `https://image.tmdb.org/t/p/original${movie.backdrop_path}`
-      : null,
+      : '/noxa.png',
     voteAverage: movie.vote_average,
     voteCount: movie.vote_count,
     runtime: movie.runtime,

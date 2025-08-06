@@ -50,7 +50,7 @@ const Acteurs: React.FC = () => {
                   src={
                     actor.profile_path
                       ? `https://image.tmdb.org/t/p/w500${actor.profile_path}`
-                      : '/profile_placeholder.png'
+                      : '/noxa.png'
                   }
                   alt={actor.name}
                 />
@@ -69,7 +69,7 @@ const Acteurs: React.FC = () => {
           <i className="fa-brands fa-youtube"></i>
         </Col>
         <Col>
-          <h3>NOXA</h3>
+          <img src='/logo-noxa.png' className='logo'></img>
         </Col>
         <Col>
           <h3>Besoin d'aide ?</h3>

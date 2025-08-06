@@ -46,29 +46,27 @@ const ActeurDetail: React.FC = () => {
 
     return (
         <Container fluid className="background">
-            <Row>
-                <div
-                    style={{
-                        backgroundImage: `linear-gradient(to right, #480082, rgba(0, 0, 0, 0.6)), url(https://image.tmdb.org/t/p/original${actor.profile_path})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'top',
-                        color: 'white',
-                        padding: '150px 30px',
-                        marginBottom: '2rem'
-                    }}
-                >
-                    <Col md={4}>
-                        <Card>
-                            <Card.Img src={`https://image.tmdb.org/t/p/w500${actor.profile_path}`} />
-                        </Card>
-                    </Col>
-                    <Col md={8}>
-                        <h3>{actor.name}</h3>
-                        <p>{actor.known_for_department}</p>
-                        <h4>Biographie</h4>
-                        <p>{actor.biography || 'Aucune biographie disponible.'}</p>
-                    </Col>
-                </div>
+            <Row
+                style={{
+                    backgroundImage: `linear-gradient(to right, #480082, rgba(0, 0, 0, 0.6)), url(https://image.tmdb.org/t/p/original${actor.profile_path})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'top',
+                    color: 'white',
+                    padding: '150px 30px',
+                    marginBottom: '2rem'
+                }}>
+
+                <Col md={4}>
+                    <Card>
+                        <Card.Img src={`https://image.tmdb.org/t/p/w500${actor.profile_path}`} />
+                    </Card>
+                </Col>
+                <Col md={8}>
+                    <h2>{actor.name}</h2>
+                    <p>{actor.known_for_department}</p>
+                    <h4>Biographie</h4>
+                    <p>{actor.biography || 'Aucune biographie disponible.'}</p>
+                </Col>
             </Row>
             <h4 className="mt-5">Oeuvres principales</h4>
             <Row>
@@ -81,7 +79,7 @@ const ActeurDetail: React.FC = () => {
                                         src={
                                             movie.poster_path
                                                 ? `https://image.tmdb.org/t/p/w342${movie.poster_path}`
-                                                : '/placeholder.jpg'
+                                                : '/noxa.png'
                                         }
                                     />
                                 </Card>
@@ -90,7 +88,7 @@ const ActeurDetail: React.FC = () => {
                     </Col>
                 ))}
                 <Link to={`/films`}>
-                    <button>Voir plus</button>
+                    <button className='costum-button'>Voir plus</button>
                 </Link>
             </Row>
             <Row className='footer mt-5'>
@@ -102,7 +100,7 @@ const ActeurDetail: React.FC = () => {
                     <i className="fa-brands fa-youtube"></i>
                 </Col>
                 <Col>
-                    <h3>NOXA</h3>
+                    <img src='/logo-noxa.png' className='logo'></img>
                 </Col>
                 <Col>
                     <h3>Besoin d'aide ?</h3>

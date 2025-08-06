@@ -53,7 +53,7 @@ const FilmDetail: React.FC = () => {
 
             const resSimilar = await fetch(`https://api.themoviedb.org/3/movie/${id}/similar?api_key=${API_KEY}&language=fr-FR&page=1`);
             const dataSimilar = await resSimilar.json();
-            setSimilarMovies(dataSimilar.results.slice(0, 6)); // 6 suggestions
+            setSimilarMovies(dataSimilar.results.slice(0, 6));
 
             setLoading(false);
         };
@@ -70,34 +70,31 @@ const FilmDetail: React.FC = () => {
 
     return (
         <Container fluid className="background">
-            <Row>
-                <div
-                    style={{
-                        backgroundImage: `linear-gradient(to right, #480082, rgba(0, 0, 0, 0.6)), url(https://image.tmdb.org/t/p/original${movie.backdrop_path})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'top',
-                        color: 'white',
-                        padding: '150px 30px',
-                        marginBottom: '2rem'
-                    }}
-                >
-                    <Col md={4}>
-                        <Card>
-                            <Card.Img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} />
-                        </Card>
-                    </Col>
-                    <Col md={8}>
-                        <h2>{movie.title}</h2>
-                        <p><strong>Date de sortie :</strong> {movie.release_date}</p>
-                        <p><strong>Durée :</strong> {movie.runtime} min</p>
-                        <p><strong>Note moyenne :</strong> {movie.vote_average}/10</p>
-                        <p><strong>Genres :</strong> {movie.genres.map(g => g.name).join(', ')}</p>
-                        <p><strong>Synopsis :</strong> {movie.overview}</p>
-                        <hr />
-                        {director && <p><strong>Réalisateur :</strong> {director.name}</p>}
-                        {writer && <p><strong>Scénario :</strong> {writer.name}</p>}
-                    </Col>
-                </div>
+            <Row
+                style={{
+                    backgroundImage: `linear-gradient(to right, #480082, rgba(0, 0, 0, 0.6)), url(https://image.tmdb.org/t/p/original${movie.backdrop_path})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'top',
+                    color: 'white',
+                    padding: '150px 30px',
+                    marginBottom: '2rem'
+                }}>
+                <Col md={4}>
+                    <Card>
+                        <Card.Img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} />
+                    </Card>
+                </Col>
+                <Col md={8}>
+                    <h2>{movie.title}</h2>
+                    <p><strong>Date de sortie :</strong> {movie.release_date}</p>
+                    <p><strong>Durée :</strong> {movie.runtime} min</p>
+                    <p><strong>Note moyenne :</strong> {movie.vote_average}/10</p>
+                    <p><strong>Genres :</strong> {movie.genres.map(g => g.name).join(', ')}</p>
+                    <p><strong>Synopsis :</strong> {movie.overview}</p>
+                    <hr />
+                    {director && <p><strong>Réalisateur :</strong> {director.name}</p>}
+                    {writer && <p><strong>Scénario :</strong> {writer.name}</p>}
+                </Col>
             </Row>
 
             <h4 className="mt-5">Acteurs principaux</h4>
@@ -111,7 +108,7 @@ const FilmDetail: React.FC = () => {
                                         src={
                                             actor.profile_path
                                                 ? `https://image.tmdb.org/t/p/w300${actor.profile_path}`
-                                                : '/placeholder.jpg'
+                                                : '/noxa.png'
                                         }
                                     />
                                 </Card>
@@ -132,7 +129,7 @@ const FilmDetail: React.FC = () => {
                                         src={
                                             similar.poster_path
                                                 ? `https://image.tmdb.org/t/p/w500${similar.poster_path}`
-                                                : '/placeholder.jpg'
+                                                : '/noxa.png'
                                         }
                                     />
                                 </Card>
@@ -141,7 +138,7 @@ const FilmDetail: React.FC = () => {
                     </Col>
                 ))}
                 <Link to={`/films`}>
-                    <button>Voir plus</button>
+                    <button className='costum-button'>Voir plus</button>
                 </Link>
             </Row>
             <Row className='footer mt-5'>
@@ -153,7 +150,7 @@ const FilmDetail: React.FC = () => {
                     <i className="fa-brands fa-youtube"></i>
                 </Col>
                 <Col>
-                    <h3>NOXA</h3>
+                    <img src='/logo-noxa.png' className='logo'></img>
                 </Col>
                 <Col>
                     <h3>Besoin d'aide ?</h3>

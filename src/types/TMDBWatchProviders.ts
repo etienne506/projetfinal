@@ -1,4 +1,3 @@
-// src/types/TMDBWatchProviders.ts
 export interface TMDBProvider {
   display_priority: number;
   logo_path: string;

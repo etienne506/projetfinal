@@ -17,14 +17,14 @@ const Recherche: React.FC = () => {
   const [totalPages, setTotalPages] = useState(1);
   const [totalResults, setTotalResults] = useState(0);
 
-  // Update URL on search
+
   useEffect(() => {
     if (query) {
       setSearchParams({ q: query, page: String(page) });
     }
   }, [query, page, setSearchParams]);
 
-  // Fetch when query or page changes
+
   useEffect(() => {
     if (!query.trim()) {
       setMovies([]);
@@ -52,7 +52,7 @@ const Recherche: React.FC = () => {
 
   const goToPage = (p: number) => setPage(p);
 
-  // Pagination à la Google (facultatif, sinon <Pagination.Prev/Next>)
+
   const paginationItems = [];
   const maxButtons = 7;
   const half = Math.floor(maxButtons / 2);
@@ -124,7 +124,7 @@ const Recherche: React.FC = () => {
                         variant="top"
                         src={movie.poster_path
                           ? `https://image.tmdb.org/t/p/w342${movie.poster_path}`
-                          : '/placeholder.jpg'}
+                          : '/noxa.png'}
                         alt={movie.title}
                       />
                       <Card.Body>
@@ -169,7 +169,7 @@ const Recherche: React.FC = () => {
           <i className="fa-brands fa-youtube"></i>
         </Col>
         <Col>
-          <h3>NOXA</h3>
+          <img src='/logo-noxa.png' className='logo'></img>
         </Col>
         <Col>
           <h3>Besoin d'aide ?</h3>

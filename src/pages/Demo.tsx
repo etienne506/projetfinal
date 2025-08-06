@@ -1,21 +1,6 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCards } from "swiper/modules";
-import "./Demo.css"; // Copie le CSS fourni plus bas dans src/pages/Demo.css
+import "./Demo.css";
 
-const demoSlides = [
-  {
-    title: "La La Land",
-    year: "2016",
-    backdrop: "https://image.tmdb.org/t/p/w780/2CAL2433ZeIihfX1Hb2139CX0pW.jpg",
-  },
-  {
-    title: "Everything Everywhere All at Once",
-    year: "2022",
-    backdrop: "https://image.tmdb.org/t/p/w780/6KErczPBROQty7QoIsaa6wJYXZi.jpg",
-  },
-  // Ajoute d'autres slides ici si tu veux
-];
 
 const demoFilms = [
   { img: "https://image.tmdb.org/t/p/w342/q719jXXEzOoYaps6babgKnONONX.jpg", title: "Your Name", year: "2016" },
@@ -43,35 +28,7 @@ const demoFilms = [
 const Demo: React.FC = () => {
   return (
     <div style={{ background: "#17181f", minHeight: "100vh", paddingBottom: 50 }}>
-      <h1 className="demo-title">FILMS</h1>
 
-      {/* Section 1 : Swiper Card Slider */}
-      <div className="swiper-container-fix">
-        <Swiper
-          effect="cards"
-          grabCursor={true}
-          centeredSlides={true}
-          slidesPerView={"auto"}
-          loop={true}
-          modules={[EffectCards]}
-          className="mySwiper"
-        >
-          {demoSlides.map((slide, idx) => (
-            <SwiperSlide key={idx}>
-              <div
-                className="slide-bg"
-                style={{ backgroundImage: `url(${slide.backdrop})` }}
-              />
-              <div className="slide-content">
-                <div className="slide-title">{slide.title}</div>
-                <div className="slide-year">{slide.year}</div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
-
-      {/* Section 2 : Grille de films */}
       <div className="grid-section">
         <div className="film-grid">
           {demoFilms.map((film, idx) => (

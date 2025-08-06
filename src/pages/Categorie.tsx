@@ -36,7 +36,7 @@ const Categorie: React.FC = () => {
       .finally(() => setLoading(false));
   }, [genreId, pageFromUrl]);
 
-  // Récupère le nom du genre
+
   useEffect(() => {
     if (!genreId) return;
     fetchGenres()
@@ -51,7 +51,7 @@ const Categorie: React.FC = () => {
     setSearchParams({ page: String(p) });
   };
 
-  // Pagination Google
+
   const paginationItems = [];
   const maxButtons = 7;
   const half = Math.floor(maxButtons / 2);
@@ -116,7 +116,6 @@ const Categorie: React.FC = () => {
   return (
     <Container fluid className="background">
       <>
-        {/* Grille de catégories */}
         <div>
           <h2 className="text-white text-center">Catégories</h2>
           <div
@@ -157,25 +156,24 @@ const Categorie: React.FC = () => {
             {totalResults} films trouvés — page {pageFromUrl} sur {totalPages}
           </p>
 
-          {/* Section 2 : Grille de films */}
-            <div className="film-grid">
-              {movies.map((film) => (
-                <div className="film-card" key={film.id}>
-                  <Link to={`/film/${film.id}`}>
-                    <img
-                      src={
-                        film.poster_path
-                          ? `https://image.tmdb.org/t/p/w342${film.poster_path}`
-                          : "/placeholder.jpg"
-                      }
-                      alt={film.title}
-                    />
-                  </Link>
-                </div>
-              ))}
-            </div>
+          <div className="film-grid">
+            {movies.map((film) => (
+              <div className="film-card" key={film.id}>
+                <Link to={`/film/${film.id}`}>
+                  <img
+                    src={
+                      film.poster_path
+                        ? `https://image.tmdb.org/t/p/w342${film.poster_path}`
+                        : '/noxa.png'
+                    }
+                    alt={film.title}
+                  />
+                </Link>
+              </div>
+            ))}
+          </div>
 
-          {/* Pagination */}
+
           {totalPages > 1 && (
             <div className="my-4">
               <Pagination className="justify-content-center align-items-center">
@@ -202,7 +200,7 @@ const Categorie: React.FC = () => {
           <i className="fa-brands fa-youtube"></i>
         </Col>
         <Col>
-          <h3>NOXA</h3>
+          <img src='/logo-noxa.png' className='logo'></img>
         </Col>
         <Col>
           <h3>Besoin d'aide ?</h3>

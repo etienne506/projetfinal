@@ -13,7 +13,7 @@ export function useMovieDetails(id: string | undefined) {
     setLoading(true);
     setError(null);
 
-    // Appel toutes les APIs en parallèle
+    
     Promise.all([
       fetchTMDBMovie(id),
       fetchTMDBCredits(id),

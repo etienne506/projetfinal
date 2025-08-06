@@ -21,25 +21,25 @@ async function safeFetch<T>(url: string): Promise<T> {
   return response.json();
 }
 
-// 1. Détail du film
+
 export function fetchTMDBMovie(id: string): Promise<TMDBMovie> {
   const url = `${BASE_URL}/movie/${id}?api_key=${API_KEY}&language=fr-FR`;
   return safeFetch<TMDBMovie>(url);
 }
 
-// 2. Casting et équipe
+
 export function fetchTMDBCredits(id: string): Promise<TMDBCredits> {
   const url = `${BASE_URL}/movie/${id}/credits?api_key=${API_KEY}&language=fr-FR`;
   return safeFetch<TMDBCredits>(url);
 }
 
-// 3. Vidéos (bande-annonce)
+
 export function fetchTMDBVideos(id: string): Promise<TMDBVideos> {
   const url = `${BASE_URL}/movie/${id}/videos?api_key=${API_KEY}&language=fr-FR`;
   return safeFetch<TMDBVideos>(url);
 }
 
-// 4. Plateformes de streaming
+
 export function fetchTMDBWatchProviders(id: string): Promise<TMDBWatchProviders> {
   const url = `${BASE_URL}/movie/${id}/watch/providers?api_key=${API_KEY}`;
   return safeFetch<TMDBWatchProviders>(url);
@@ -59,13 +59,13 @@ export async function fetchUpcomingMovies() {
   return data.results;
 }
 
-// Films par Catégorie
+
 export function fetchMoviesByGenre(genreId: string, page: number = 1): Promise<TMDBMoviesByGenreResponse> {
   const url = `${BASE_URL}/discover/movie?api_key=${API_KEY}&with_genres=${genreId}&language=fr-FR&page=${page}&sort_by=popularity.desc`;
   return safeFetch<TMDBMoviesByGenreResponse>(url);
 }
 
-// Nom des Catégories
+
 export async function fetchGenres(): Promise<TMDBGenre[]> {
   const url = `${BASE_URL}/genre/movie/list?api_key=${API_KEY}&language=fr-FR`;
   const response = await fetch(url);
@@ -74,7 +74,7 @@ export async function fetchGenres(): Promise<TMDBGenre[]> {
     throw new Error(`Erreur ${response.status} : ${text}\nURL: ${url}`);
   }
   const data = await response.json();
-  return data.genres; // TMDB répond { genres: [...] }
+  return data.genres;
 }
 
 export function searchMovies(query: string, page: number = 1): Promise<TMDBSearchMoviesResponse> {

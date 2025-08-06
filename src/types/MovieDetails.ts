@@ -1,4 +1,3 @@
-// src/types/MovieDetails.ts
 export interface MovieDetails {
   id: number;
   title: string;
