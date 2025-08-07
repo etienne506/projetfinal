@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import etienne from '../assets/etienne.png';
+import { Link } from 'react-router-dom';
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossOrigin="anonymous" referrerPolicy="no-referrer" />
 
 
@@ -50,17 +51,19 @@ const About: React.FC = () => {
       <Row className='footer'>
         <Col>
           <h3>Suivez-nous !</h3>
-          <i className="fa-brands fa-facebook"></i>
-          <i className="fa-brands fa-instagram"></i>
-          <i className="fa-brands fa-twitter"></i>
-          <i className="fa-brands fa-youtube"></i>
+          <i className="fa-brands fa-facebook fa-3x m-2"></i>
+          <i className="fa-brands fa-instagram fa-3x m-2"></i>
+          <i className="fa-brands fa-twitter fa-3x m-2"></i>
+          <i className="fa-brands fa-youtube fa-3x m-2"></i>
         </Col>
         <Col>
           <img src='/logo-noxa.png' className='logo'></img>
         </Col>
         <Col>
           <h3>Besoin d'aide ?</h3>
-          <button>Nous joindre</button>
+          <Link to={`/about`}>
+          <button className='second-costum-button'>Nous joindre</button>
+        </Link>
         </Col>
         <Col className="col-12">
           <p>© 2020-2025 NOXA Networks Entertainment LLC. Droits réservés</p>

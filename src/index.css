@@ -24,7 +24,7 @@ a:hover {
 
 body {
   background: 
-    linear-gradient(to right, #480082, rgba(0, 0, 0, 0.8));
+    linear-gradient(to right, #2a008a, rgba(0, 0, 0, 0.8));
   margin: 0;
   color: white;
 }
@@ -67,24 +67,45 @@ button:focus-visible {
   width: 50px;
 }
 
+@media (max-width: 576px) {
+  .footer { 
+    flex-direction: column;
+  }
+  .reseau { 
+    padding-bottom: 30px;
+  }
+  .reseau i {
+    font-size: 35px;
+  }
+  .footer-logo{ 
+    padding-bottom: 30px;
+  }
+}
+
 .logo {
   width: 25vh;
   height: 75px;
 }
 
 .logo-menu {
-  width: 10vh;
-  height: 35px;
+  max-width: 120px;
+  height: auto;
+  object-fit: contain;
 }
 
-.popular {
-  min-height: 60vh;
+
+.popular h1 {
+  min-height: 43vh;
   text-align: left;
+  font-size: 10vh;
+  padding-top: 50px;
 }
 
-.upcoming {
-  min-height: 60vh;
+.upcoming h1 {
+  min-height: 43vh;
   text-align: right;
+  font-size: 10vh;
+  padding-top: 50px;
 }
 
 .categorie {
@@ -92,7 +113,7 @@ button:focus-visible {
   height: 15vh;
   margin: 20px;
   background: white;
-  color: #480082;
+  color: #2a008a;
   text-align: center;
   border-radius: 2rem;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
@@ -112,7 +133,7 @@ button:focus-visible {
 }
 
 .background {
-  background: linear-gradient(to right, #480082, rgba(0, 0, 0, 0.2));
+  background: linear-gradient(to right, #2a008a, rgba(0, 0, 0, 0.2));
 }
 
 .background h2 {
@@ -133,22 +154,50 @@ button:focus-visible {
   margin-bottom: 50px;
 }
 
+@media (max-width: 576px) {
+  .recherche {
+    flex-direction: column;
+  }
+}
+
 .costum-button {
   display: block;
   height: 60px;
   width: 20vh;
   margin: 0 auto;
   background-color: white;
-  color: #480082;
+  color: #2a008a;
   font-size: 20px;
   margin-bottom: 20px;
   transition: background-color 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  border-radius: 999px;
 }
 
 .costum-button:hover {
-  background-color: #480082;
+  background-color: #2a008a;
   color: white;
   border-color: white;
+}
+
+.second-costum-button {
+  display: block;
+  height: 60px;
+  width: 20vh;
+  margin: 0 auto;
+  background-color: #2a008a;
+  color: white;
+  font-size: 20px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  border-radius: 999px;
+}
+
+.second-costum-button:hover {
+  background-color: white;
+  color: #2a008a;
+  border-color: #2a008a;
 }
 
 

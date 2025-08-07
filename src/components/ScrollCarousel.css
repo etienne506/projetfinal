@@ -9,6 +9,7 @@
   display: flex;
   width: max-content;
   animation: scroll 60s linear infinite;
+  border-radius: 10px;
 }
 
 .scroll-item {
@@ -17,10 +18,12 @@
 }
 
 .scroll-categorie {
+  background-color: white;
   font-size: 30px;
   padding: 20px;
   flex: 0 0 auto;
   margin: 0 10px;
+  border-radius: 10px;
 }
 
 .scroll-item img {

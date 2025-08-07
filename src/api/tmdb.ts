@@ -59,6 +59,12 @@ export async function fetchUpcomingMovies() {
   return data.results;
 }
 
+export async function fetchActionMovies() {
+  const res = await fetch(`${BASE_URL}/discover/movie?api_key=${API_KEY}&language=fr-FR&with_genres=28&page=1`);
+ if (!res.ok) {throw new Error("Erreur lors du chargement des films d'action");}
+  const data = await res.json();
+  return data.results;
+}
 
 export function fetchMoviesByGenre(genreId: string, page: number = 1): Promise<TMDBMoviesByGenreResponse> {
   const url = `${BASE_URL}/discover/movie?api_key=${API_KEY}&with_genres=${genreId}&language=fr-FR&page=${page}&sort_by=popularity.desc`;

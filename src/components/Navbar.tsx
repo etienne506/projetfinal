@@ -9,7 +9,7 @@ const AppNavbar: React.FC = () => {
         <Navbar.Brand as={Link} to="/"><img src='/logo-noxa.png' className='logo-menu'></img></Navbar.Brand>
         <Navbar.Toggle aria-controls="main-navbar-nav" />
         <Navbar.Collapse id="main-navbar-nav">
-          <Nav className="me-auto">
+          <Nav className="ms-auto">
             <Nav.Link as={Link} to="/films">Films</Nav.Link>
             <Nav.Link as={Link} to="/categorie/28">Catégories</Nav.Link>
             <Nav.Link as={Link} to="/acteurs">Acteurs</Nav.Link>

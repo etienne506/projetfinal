@@ -48,7 +48,7 @@ const ActeurDetail: React.FC = () => {
         <Container fluid className="background">
             <Row
                 style={{
-                    backgroundImage: `linear-gradient(to right, #480082, rgba(0, 0, 0, 0.6)), url(https://image.tmdb.org/t/p/original${actor.profile_path})`,
+                    backgroundImage: `linear-gradient(to right, #2a008a, rgba(0, 0, 0, 0.6)), url(https://image.tmdb.org/t/p/original${actor.profile_path})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'top',
                     color: 'white',
@@ -94,17 +94,19 @@ const ActeurDetail: React.FC = () => {
             <Row className='footer mt-5'>
                 <Col>
                     <h3>Suivez-nous !</h3>
-                    <i className="fa-brands fa-facebook"></i>
-                    <i className="fa-brands fa-instagram"></i>
-                    <i className="fa-brands fa-twitter"></i>
-                    <i className="fa-brands fa-youtube"></i>
+                    <i className="fa-brands fa-facebook fa-3x m-2"></i>
+                    <i className="fa-brands fa-instagram fa-3x m-2"></i>
+                    <i className="fa-brands fa-twitter fa-3x m-2"></i>
+                    <i className="fa-brands fa-youtube fa-3x m-2"></i>
                 </Col>
                 <Col>
                     <img src='/logo-noxa.png' className='logo'></img>
                 </Col>
                 <Col>
                     <h3>Besoin d'aide ?</h3>
-                    <button>Nous joindre</button>
+                    <Link to={`/about`}>
+                      <button className='second-costum-button'>Nous joindre</button>
+                    </Link>
                 </Col>
                 <Col className="col-12">
                     <p>© 2020-2025 NOXA Networks Entertainment LLC. Droits réservés</p>
