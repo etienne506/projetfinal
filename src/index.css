@@ -101,11 +101,23 @@ button:focus-visible {
   padding-top: 50px;
 }
 
+@media (max-width: 576px) {
+  .popular h1 {
+    font-size: 40px;
+  }
+}
+
 .upcoming h1 {
   min-height: 43vh;
   text-align: right;
   font-size: 10vh;
   padding-top: 50px;
+}
+
+@media (max-width: 576px) {
+  .upcoming h1 {
+    font-size: 40px;
+  }
 }
 
 .categorie {
@@ -157,6 +169,7 @@ button:focus-visible {
 @media (max-width: 576px) {
   .recherche {
     flex-direction: column;
+    margin: 0;
   }
 }
 
@@ -180,6 +193,12 @@ button:focus-visible {
   border-color: white;
 }
 
+@media (max-width: 576px) {
+  .costum-button {
+    font-size: 17px;
+  }
+}
+
 .second-costum-button {
   display: block;
   height: 60px;
@@ -200,6 +219,11 @@ button:focus-visible {
   border-color: #2a008a;
 }
 
+@media (max-width: 576px) {
+  .second-costum-button {
+    font-size: 17px;
+  }
+}
 
 @media (prefers-color-scheme: light) {
   :root {

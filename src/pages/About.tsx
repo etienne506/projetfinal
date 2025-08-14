@@ -48,6 +48,28 @@ const About: React.FC = () => {
           au talent incroyable !</p>
           </Col>
       </Row>
+      <Row className='align-items-center'>
+        <h2>Camille</h2>
+        <Col md={4} className='image'>
+        <img src='/noxa.png' alt='image'></img>
+      </Col>
+      <Col md={8}>
+        <p>Noxa est une plateforme de streaming pensée 
+          pour recréer l'ambiance envoûtante d'une salle 
+          de cinéma… mais chez vous.</p>
+
+          <p>Avec son design moderne aux teintes d'indigo 
+            et de noir, elle plonge les spectateurs dans 
+            une expérience immersive et élégante.</p>
+
+          <p>Née de la collaboration entre Camille Quintal 
+            (design graphique) et Étienne Cayer 
+            (programmation et intégration), Noxa allie 
+            esthétique soignée et technologie performante 
+            pour offrir un visionnage fluide, 
+            unique et captivant.</p>
+          </Col>
+      </Row>
       <Row className='footer'>
         <Col>
           <h3>Suivez-nous !</h3>
